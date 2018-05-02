@@ -30,9 +30,9 @@ let AllEventsScreen = ({allEvents}) => {
                   <p>{event.eventTitle}</p>
                   <p>{event.Date}</p>
                   <div>
-                    <img src={shoppingListIcon} alt="shopping-list-icon" style={style}/>
                     <p>{event.mealType}</p>
                     <p>{event.eventSize}</p>
+                    <img src={shoppingListIcon} alt="shopping-list-icon" style={style}/>
                   </div>
                 </div>
               )

@@ -8,14 +8,18 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 let initialState = {
+    
+    currentUser: {},
+    
     usersList: [
-        {userid: "1", email: "janelle@j.com", password: "one"},
-        {userid: "2",email: "jaehee@j.com", password: "two"},
-        {userid: "3",email: "dylan@d.com", password: "three"}
+        {userId: "1", email: "janelle@j.com", password: "one"},
+        {userId: "2",email: "jaehee@j.com", password: "two"},
+        {userId: "3",email: "dylan@d.com", password: "three"},
+        {userId: "4",email: "prathyusha@p.com", password: "four"}
     ],
     eventsList: [
         {
-            eventid: "1",
+            eventId: "1",
             eventTitle: "Alexander Graduation",
             eventDate: "17-May-2018",
             eventDescription: "Casual event for a coding bootcamp graduation",
@@ -48,7 +52,7 @@ let initialState = {
             ]
         },
         {
-            eventid: "2",
+            eventId: "2",
             eventTitle: "Kim Birthday",
             eventDate: "17-August-2018",
             eventDescription: "Elegant birthday",
@@ -81,7 +85,7 @@ let initialState = {
             ]
         },
         {
-            eventid: "3",
+            eventId: "3",
             eventTitle: "Bailey Launch Party",
             eventDate: "17-October-2018",
             eventDescription: "Cool event for company launch party",
@@ -114,7 +118,7 @@ let initialState = {
             ]
         },
         {
-            eventid: "4",
+            eventId: "4",
             eventTitle: "Mattam Anniversary",
             eventDate: "16-December-2018",
             eventDescription: "Festive wedding anniversary",
@@ -148,10 +152,10 @@ let initialState = {
         }
     ],    
     clientsList: [
-        {clientid: "1", name: "Janelle Alexander"},
-        {clientid: "2", name: "Jaehee Kim"},
-        {clientid: "3", name: "Dylan Bailey"},
-        {clientid: "4", name: "Prathyusha Mattam"},
+        {clientId: "1", name: "Janelle Alexander"},
+        {clientId: "2", name: "Jaehee Kim"},
+        {clientId: "3", name: "Dylan Bailey"},
+        {clientId: "4", name: "Prathyusha Mattam"},
     ],
     isLoggedIn: false
 }

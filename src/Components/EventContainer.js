@@ -5,7 +5,7 @@ import EventDescription from './EventDescription';
 import EventMetadata from './EventMetadata';
 
 let EventContainer = ({allEvents, idOfEventBeingViewed}) => {
-    let arr = allEvents.filter(event => event.eventid === idOfEventBeingViewed);
+    let arr = allEvents.filter(event => event.eventId === idOfEventBeingViewed);
     let eventToDisplay = arr[0]; //how can I refactor this foolishness?
     return (
       <div className="EventContainer">
