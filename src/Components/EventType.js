@@ -1,9 +1,9 @@
 import React from 'react';
 
-let EventType = () => {
+let EventType = ({type}) => {
     return (
       <div className="EventType">
-        <p>THIS IS THE EventType COMPONENT: Graduation</p>
+        <p>{type}</p>
       </div>
     )
   }

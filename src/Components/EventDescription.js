@@ -1,9 +1,9 @@
 import React from 'react';
 
-let EventDescription = () => {
+let EventDescription = ({description}) => {
     return (
       <div className="EventDescription">
-        <p>Casual event for a coding bootcamp graduation and here are more words to fill the text box with more words and here are more</p>
+        <p>{description}</p>
         </div>
         )
   }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-let EventSize = () => {
+let EventSize = ({size}) => {
     return (
       <div className="EventSize">
-      <p>THIS IS THE EventSize COMPONENT: 25</p>
+      <p>{size}</p>
       </div>
     )
   }

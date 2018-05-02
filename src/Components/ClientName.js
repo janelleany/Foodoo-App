@@ -1,9 +1,9 @@
 import React from 'react';
 
-let ClientName = () => {
+let ClientName = ({client}) => {
     return (
       <div className="ClientName">
-        <p>THIS IS THE ClientName COMPONENT: Janelle Alexander</p>
+        <p>{client}</p>
       </div>
     )
   }

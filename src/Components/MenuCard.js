@@ -1,18 +1,21 @@
 import React from 'react';
 
-let MenuCard = () => {
+let MenuCard = ({menu}) => {
+  let style = {
+    fontWeight: 'bold'
+  };
+
     return (
       <div className="MenuCard">
-      <p>THIS IS THE MenuCard COMPONENT:</p>
-        <p>Menu</p>
-        <p>Appetizer</p>
-        <p>Crabcakes</p>
-        <p>Main</p>
-        <p>Pasta</p>
-        <p>Dessert</p>
-        <p>Banana Bread</p>
-        <p>Signature Drink</p>
-        <p>Moscow Mule Mocktail</p>
+        <h4>MENU</h4>
+        <p style={style}>Appetizer</p>
+        <p>{menu.appetizer}</p>
+        <p style={style}>Main</p>
+        <p>{menu.main}</p>
+        <p style={style}>Dessert</p>
+        <p>{menu.dessert}</p>
+        <p style={style}>Signature Drink</p>
+        <p>{menu.drink}</p>
       </div>
     )
   }

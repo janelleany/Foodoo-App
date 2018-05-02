@@ -10,12 +10,17 @@ let mapPropsToState = (state) => {
 }
 
 let AllEventsScreen = ({allEvents}) => {
+
+  const style = { //we can get rid of this and the style attribute in the img tag once we do real CSS styling later
+    height: "36px",
+    width: "33px"
+  }
+
   return (
       <div className="AllEvents-container">
         <header>
           <Header />
         </header>
-        <p>The Banner Component will go here</p>
         <div>
           {
             allEvents.map(event => {

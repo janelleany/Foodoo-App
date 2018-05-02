@@ -74,7 +74,7 @@ let initialState = {
                 unit: "loaves"
                 },
                 {
-                item: "Champagne",
+                item: "champagne",
                 quantity: 10,
                 unit: "bottles"
                 }
@@ -108,6 +108,39 @@ let initialState = {
                 },
                 {
                 item: "champagne",
+                quantity: 10,
+                unit: "bottles"
+                }
+            ]
+        },
+        {
+            eventid: "4",
+            eventTitle: "Mattam Anniversary",
+            eventDate: "16-December-2018",
+            eventDescription: "Festive wedding anniversary",
+            eventSize: 75,
+            eventType: "Anniversary",
+            mealType: "Buffet",
+            clientName: "Prathyusha Mattam",
+            menu: {
+                appetizer: "Spinach Quiche",
+                main: "Grilled Lamb",
+                dessert: "Gelato",
+                drink: "Wine Spritzer"
+            },
+            shoppingList: [
+                {
+                item: "spinach",
+                quantity: 20,
+                unit: "lbs"
+                },
+                {
+                item: "leg of lamb",
+                quantity: 30,
+                unit: "lbs"
+                },
+                {
+                item: "chardonnay",
                 quantity: 10,
                 unit: "bottles"
                 }

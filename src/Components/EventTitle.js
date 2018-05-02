@@ -1,9 +1,10 @@
 import React from 'react';
 
-let EventTitle = () => {
+
+let EventTitle = ({title, date}) => {
     return (
-      <div className="EventTitle">
-        <p>Alexander Graduation</p><p>17-May-2018</p>
+      <div className="EventTitle-container">
+        <h2>{title.toUpperCase()}</h2><p>{date}</p>
       </div>
     )
   }

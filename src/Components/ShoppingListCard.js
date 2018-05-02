@@ -1,13 +1,19 @@
 import React from 'react';
 
-let ShoppingListCard = () => {
+
+let ShoppingListCard = ({shoppingList}) => {
     return (
       <div className="ShoppingListCard">
-        <p>THIS IS THE SHOPPING LIST CARD COMPONENT:</p>
-        <p>20 lbs cavatelli</p>
-        <p>20 loaves of bread</p>
-        <p>20 bottles of ginger beer</p>
-        <p>10 tins of Old Bay Seasoning</p>
+        <h4>SHOPPING LIST</h4>
+        <ul>
+          {
+            shoppingList.map(item => {
+              return (
+                <li><span>{item.quantity} </span><span>{item.unit} of </span><span>{item.item}</span></li>
+              );
+            })
+          }
+        </ul>
       </div>
     )
   }

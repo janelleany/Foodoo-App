@@ -1,9 +1,9 @@
 import React from 'react';
 
-let MealType = () => {
+let MealType = ({meal}) => {
     return (
       <div className="MealType">
-        <p>THIS IS THE MealType COMPONENT: Buffet</p>
+        <p>{meal}</p>
       </div>
     )
   }
