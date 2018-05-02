@@ -1,9 +1,8 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
 import shoppingListIcon from '../images/shopping-list-icon.svg';
-
 import Header from '../Components/Header';
 
 let mapPropsToState = (state) => {
@@ -26,11 +25,13 @@ let AllEventsScreen = ({allEvents}) => {
           {
             allEvents.map(event => {
               return (
-                <div>
+                <div key={event.eventid}>   
                   <p>{event.eventTitle}</p>
                   <p>{event.Date}</p>
-                  <div>
-                    <img src={shoppingListIcon} alt="shopping-list-icon" style={style}/>
+                <div>
+                    <Link to="/shoppinglist"> 
+                      <img src={shoppingListIcon} className="shopping-list-icon" alt="shoppingListIcon" />
+                    </Link>
                     <p>{event.mealType}</p>
                     <p>{event.eventSize}</p>
                   </div>
