@@ -11,9 +11,7 @@ import Header from '../Components/Header';
 import { getAllEvents } from "../Lib/api-calls";
 import { loadEventsToStore } from "../Actions/dispatch-actions";
 
-let mapPropsToState = (state) => {
-  return { allEvents: state.eventsList}
-};
+let mapStateToProps = (state) => ({ eventsList: state.eventsList, isLoggedIn: state.isLoggedIn });
 
 let mapDispatchToProps = dispatch => {
   return { loadEventsToStore: events => dispatch(loadEventsToStore(events)) }
@@ -23,18 +21,22 @@ let mapDispatchToProps = dispatch => {
 class AllEventsScreen extends Component {
 
   componentDidMount() {
-    getAllEvents() 
+    if(this.props.isLoggedIn) {
+      getAllEvents() 
       .then(res => res.json())
       .then(events => {
         console.log(events);
         this.props.loadEventsToStore(events);
       }); 
+    } else {
+      this.props.history.push('/');
+    }    
   }
 
   render() {
 
-    let allEvents = this.props.allEvents;
-
+    let allEvents = this.props.eventsList;
+    
     return (
         <div>
           <header>
@@ -70,4 +72,4 @@ class AllEventsScreen extends Component {
   }
 }
 
-export default connect(mapPropsToState, mapDispatchToProps)(AllEventsScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(AllEventsScreen);
